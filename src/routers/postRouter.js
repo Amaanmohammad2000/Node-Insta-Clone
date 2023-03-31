@@ -20,6 +20,6 @@ const fileUpload = multer({
 
 router.post("/post", fileUpload.single("image"), controller.post);
 router.get("/posts", controller.get);
-router.post("/images/:name", controller.download);
+router.get("/images/:name", controller.download);
 
 module.exports = router;
